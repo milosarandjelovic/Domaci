@@ -6,7 +6,6 @@ public class Zadatak1 {
 		// TODO Auto-generated method stub
 		Proizvod a = new Proizvod();
 		Proizvod b = new Proizvod();
-
 		a.name = "jabuke";
 		a.price = 78;
 		a.weight = 1000;
@@ -18,7 +17,15 @@ public class Zadatak1 {
 		a.print();
 		System.out.println();
 		b.print();
-
+		
+		int poskupljenje=40;
+		
+		a.povecajCenu(poskupljenje);
+		a.print();
+		
+		b.cenaSaPopustom(20);
+		b.print();
+		
 	}
 
 }

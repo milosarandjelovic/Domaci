@@ -6,8 +6,17 @@ public class Proizvod {
 	double weight;
 
 	public void print() {
-		System.out.print("{{" + this.name + "}}, ");
-		System.out.print("{{" + this.price + "}}, ");
-		System.out.print("{{" + this.weight + "}}");
+		System.out.println("{{" + this.name + "}}, " + "{{" + this.price + "}}, " + "{{" + this.weight + "}}");
+
+	}
+
+	public void povecajCenu(int poskupljenje) {
+		this.price = this.price + poskupljenje;
+	}
+
+	public double cenaSaPopustom(int popust) {
+
+		return this.price = this.price - this.price / 100 * popust;
+
 	}
 }
