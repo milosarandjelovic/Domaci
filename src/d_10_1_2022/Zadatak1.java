@@ -15,7 +15,7 @@ public class Zadatak1 {
 		b.weight = 1000;
 
 		a.print();
-		System.out.println();
+		
 		b.print();
 		
 		int poskupljenje=40;

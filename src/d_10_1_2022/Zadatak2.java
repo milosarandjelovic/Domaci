@@ -9,12 +9,12 @@ SmartAirConditioning b=new SmartAirConditioning();
 
 
 a.name="LG";
-a.mod="cold";
-a.temperature=26;
+a.mod=true;
+a.temp=26;
 
 b.name="VOX";
-b.mod="heat";
-b.temperature=28;
+b.mod=false;
+b.temp=28;
 
 a.printsAC();
 System.out.println();
