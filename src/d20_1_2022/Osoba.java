@@ -4,7 +4,7 @@ public class Osoba {
 	private String imeIprezime;
 	private String JMBG;
 	private int godRodj;
-
+//promena kolko da mogu da dodam u commit
 	public Osoba(String imeIprezime, String jMBG, int godRodj) {
 
 		this.imeIprezime = imeIprezime;

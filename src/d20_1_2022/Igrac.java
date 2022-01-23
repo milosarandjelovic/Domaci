@@ -1,8 +1,11 @@
 package d20_1_2022;
 
+import java.util.ArrayList;
+
 public class Igrac extends Osoba {
 	private int brojDresa;
 	private String pozicija;
+	ArrayList<Karton> kartoni = new ArrayList<Karton>();
 	private boolean kapiten;
 
 	public Igrac() {
@@ -42,6 +45,33 @@ public class Igrac extends Osoba {
 		this.kapiten = kapiten;
 	}
 
+	public void dodajKarton(String tip) {
+		Karton a = new Karton(tip);
+		kartoni.add(a);
+	}
+
+	public int brojZKartona() {
+		int brojac = 0;
+		for (int i = 0; i < kartoni.size(); i++) {
+
+			if (kartoni.get(i).getTip().equals("zuti")) {
+				brojac++;
+			}
+		}
+		return brojac;
+	}
+
+	public int brojCKartona() {
+		int brojac = 0;
+		for (int i = 0; i < kartoni.size(); i++) {
+
+			if (kartoni.get(i).getTip().equals("crveni")) {
+				brojac++;
+			}
+		}
+		return brojac;
+	}
+
 	@Override
 	public void print() {
 
@@ -50,7 +80,10 @@ public class Igrac extends Osoba {
 		System.out.println(this.pozicija);
 		if (kapiten) {
 			System.out.println("Kapiten");
+
 		}
+		System.out.println("Broj crvenih kartona: " + this.brojCKartona());
+		System.out.println("Broj zutih kartona: " + this.brojZKartona());
 	}
 
 }
